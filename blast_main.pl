@@ -58,7 +58,7 @@ while ($count<=25) {
     if ($value>10) {                        #value is the "grade" above
 
 
-            open FILE, "/2_disk/chenyr/hg19chr/$count" or die "cannot open the file: $!\n";
+            open FILE, "/2_disk/mjd/hg19chr/$count" or die "cannot open the file: $!\n";
             $chr_target=<FILE>;
             my $loc_seq=substr($chr_target, $key, length($seq));    #get the sequence at the guessed location for later alignment
 
