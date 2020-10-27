@@ -1,7 +1,7 @@
 #!/urs/bin/perl   
 
 ###### get query:
-open FILE3, '/3_disk/zhujd/query1.fa' or die "cannot open the file: $!\n";
+open FILE3, '/3_disk/mjd/query1.fa' or die "cannot open the file: $!\n";
 
 my @DNA=<FILE3>;
 my $seq = join('', @DNA);   $seq=~s/\R//g; $seq=~s/\n//g;
@@ -10,7 +10,7 @@ my @compare;
 
 while ($count<=(length($seq)-11)) {
     my $n=substr($seq, $count, 11);
-    open FILE, "/2_disk/chenyr/libfiles1/$n" or die "cannot open the file: $!\n";
+    open FILE, "/2_disk/mjd/libfiles1/$n" or die "cannot open the file: $!\n";
 
     @DNA=<FILE>;
     my $Words = join('', @DNA);
